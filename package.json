@@ -2,16 +2,18 @@
   "name": "docker-registry",
   "version": "2.0.0",
   "description": "proxy dockerhub via cloudflare pages",
+  "main": "worker.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "build": "pnpm install && pnpm run eslint",
     "page-dev": "wrangler pages dev public",
     "eslint": "eslint --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whyun-pages/docker-registry.git"
+    "url": "https://github.com/whyun-pages/docker-registry.git"
   },
   "keywords": [
     "dockerhub",
@@ -28,6 +30,6 @@
     "env-cmd": "^10.1.0",
     "eslint": "^9.6.0",
     "globals": "^15.6.0",
-    "wrangler": "^3.62.0"
+    "wrangler": "^4.6.0"
   }
 }
